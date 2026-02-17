@@ -1,8 +1,8 @@
 fav_lang = {'jen': 'python', 'sarah': 'c', 
             'edward': 'ruby', 'phil': 'python'}
 
+# using values 
+print("The following languages have been mentioned:")
 
-for name in fav_lang:
-    print(name.title())
-    print(f"{name.title()}'s favorite language is {fav_lang[name].title()}.")
-    
+for language in fav_lang.values():
+    print(language.title())
