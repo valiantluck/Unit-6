@@ -17,3 +17,10 @@ alien_0['color'] = 'yellow'
 
 print(alien_0)
 
+del alien_0['points']
+
+print(alien_0)
+
+points = alien_0.get('points')  # the get method returns None if the key doesn't exist, instead of raising an error
+print(points)
+
