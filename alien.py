@@ -1,26 +1,21 @@
 
 alien_0 = {}
-print(alien_0)
 
-alien_0['x_position'] = 0
-alien_0['y_position'] = 25
+# make 30 green aliens
 
-print(alien_0)
-
-alien_0['color'] = 'green'
-alien_0['points'] = 5
-
-
-print(alien_0)
-
-alien_0['color'] = 'yellow'
-
-print(alien_0)
-
-del alien_0['points']
-
-print(alien_0)
-
-points = alien_0.get('points', 'No points assigned.')  # the get method returns None if the key doesn't exist, instead of raising an error
-print(points)
+for aliens_number in range(30):
+    new_alien = {'color': 'green', 'points': 5, 'speed': 'slow'}
+    alien_0.append(new_alien)
+    
+for alien in alien_0[:3]: 
+    if alien['color'] == 'green':
+        alien['color'] = 'yellow'
+        alien['points'] = 10
+        alien['speed'] = 'medium'
+        alien['points'] = 10
+# show the first 5 aliens 
+for alien in alien_0[:5]:
+    print(alien)
+# show how many aliens have been created
+print(f"Total number of aliens: {len(alien_0)}")
 
